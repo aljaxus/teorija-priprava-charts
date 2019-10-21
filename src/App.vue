@@ -1,14 +1,26 @@
 <template>
   <div id="app">
-    <apexchart type=area height=500 :options="options" :series="series" />
+    <apexchart
+      type="area"
+      height="500"
+      :options="options"
+      :series="series"
+    />
     PASTE THE WHOLE PAGE TEXT FROM http://teorija-priprava.gov.si/ IN THIS INPUT
-    <textarea v-model="text" name="text" cols="30" rows="3" ref="text" @focus="$event.target.select()"></textarea>
+    <textarea
+      ref="text"
+      v-model="text"
+      name="text"
+      cols="30"
+      rows="3"
+      @focus="$event.target.select()"
+    />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
+  name: 'App',
   data: () => ({
     text: '',
     months: {
